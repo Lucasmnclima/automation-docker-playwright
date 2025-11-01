@@ -48,7 +48,8 @@ docker build -t playwright-tests .
 ````
 
 🔹 2. Rodar os testes dentro do container
-```` docker run --rm -v "$(pwd)":/app -w /app playwright-tests npx playwright test
+````
+docker run --rm -v "$(pwd)":/app -w /app playwright-tests npx playwright test
 ````
 
 📁 Após a execução, o relatório em HTML será gerado automaticamente em:
