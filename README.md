@@ -1,8 +1,47 @@
-# automation-docker-playwright
-🚀 Automação de testes end-to-end com Playwright, Docker e GitHub Actions — ambiente completo para executar testes automatizados isolados, com CI/CD e relatórios em HTML. 
-#Playwright 
-#Docker 
-#E2ETests 
-#Automation 
-#GitHubActions 
-#CI/CD
+# 🧪 Automação Docker Playwright
+
+[![Playwright Tests CI](https://github.com/<SEU_USUARIO>/automacao-docker-playwright/actions/workflows/ci-playwright.yml/badge.svg)](https://github.com/<Lucasmnclima>/automation-docker-playwright/actions/workflows/ci-playwright.yml)
+
+Ambiente completo de automação de testes **end-to-end (E2E)** utilizando **Playwright**, **Docker** e **GitHub Actions**.  
+Ideal para rodar testes automatizados de forma **isolada**, **reprodutível** e **totalmente integrada ao CI/CD**.
+
+---
+
+## 🚀 Tecnologias utilizadas
+
+- [Playwright](https://playwright.dev/) — Framework de testes E2E moderno
+- [Docker](https://www.docker.com/) — Containerização do ambiente de testes
+- [Node.js 20+](https://nodejs.org/) — Plataforma base para execução dos testes
+- [GitHub Actions](https://github.com/features/actions) — Pipeline CI/CD automatizado
+
+---
+
+## 🧱 Estrutura do projeto
+automacao-docker-playwright/
+├── .github/
+│ └── workflows/
+│ └── ci-playwright.yml # Pipeline CI/CD do GitHub Actions
+├── tests/
+│ ├── checkoutone.spec.js # Teste de checkout
+│ ├── login.spec.js # Teste de login
+│ ├── register.spec.js # Teste de registro
+├── pages/
+│ ├── CheckoutOnePage.js # Page Object do checkout
+│ ├── LoginPage.js # Page Object do login
+│ ├── RegisterPage.js # Page Object do registro
+├── utils/
+│ └── fakeData.js # Geração de dados fake com Faker.js
+├── playwright.config.js # Configuração global do Playwright
+├── Dockerfile # Ambiente isolado para execução dos testes
+├── package.json # Dependências e scripts NPM
+└── README.md # Este arquivo 😄
+
+
+---
+
+## 🐳 Executando via Docker
+
+### 🔹 1. Build da imagem
+
+```bash
+docker build -t playwright-tests .
