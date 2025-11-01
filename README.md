@@ -102,9 +102,6 @@ http://localhost:7900
 
 Lucas Marcio Nascimento Costa Lima
 Analista de Testes • Automação com JavaScript, Playwright, Cypress e Docker  
-
 📍 Belo Horizonte - MG  
-
-📧 lucasmnclima@gmail.com
-
+📧 lucasmnclima@gmail.com  
 🔗 [!LinkedIn](https://www.linkedin.com/in/lucasmnclima/)
