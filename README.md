@@ -1,6 +1,6 @@
 # 🧪 Automação Docker Playwright
 
-[![Playwright Tests CI](https://github.com/<SEU_USUARIO>/automacao-docker-playwright/actions/workflows/ci-playwright.yml/badge.svg)](https://github.com/<Lucasmnclima>/automation-docker-playwright/actions/workflows/ci-playwright.yml)
+[![Playwright Tests CI](https://github.com/<Lucasmnclima>/automacao-docker-playwright/actions/workflows/ci-playwright.yml/badge.svg)](https://github.com/<Lucasmnclima>/automation-docker-playwright/actions/workflows/ci-playwright.yml)
 
 Ambiente completo de automação de testes **end-to-end (E2E)** utilizando **Playwright**, **Docker** e **GitHub Actions**.  
 Ideal para rodar testes automatizados de forma **isolada**, **reprodutível** e **totalmente integrada ao CI/CD**.
