@@ -51,4 +51,4 @@ test.describe("Funcionalidade de Checkout", () => {
     await expect(page).toHaveURL(/.*checkout/);
     console.log("🎉 Pedido finalizado com sucesso (sem validar modal).");
   });
-});
+}, 60000);

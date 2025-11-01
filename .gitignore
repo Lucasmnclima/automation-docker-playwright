@@ -1,6 +1,5 @@
 node_modules/
 playwright-report/
 test-results/
-storageState.json
 *.log
 .DS_Store
