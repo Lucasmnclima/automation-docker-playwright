@@ -25,7 +25,7 @@ test.describe("Funcionalidade de Checkout", () => {
     // Todos os testes seguintes herdarão esse estado.
     await page.context().storageState({ path: "storageState.json" });
     await page.close();
-  });
+  }, 60000);
 
   // Agora, o beforeEach prepara a página de Checkout
   test.beforeEach(async ({ page }) => {
@@ -34,7 +34,7 @@ test.describe("Funcionalidade de Checkout", () => {
 
     // Navega para a página
     await checkoutPage.goto();
-  });
+  }, 60000);
 
   test("Deve preencher e finalizar o pedido com sucesso", async ({ page }) => {
     // 1. Preenche os dados

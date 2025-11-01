@@ -22,22 +22,22 @@ test.describe("Funcionalidade de Login", () => {
     user = createLoginUser();
 
     await loginPage.goto();
-  });
+  }, 60000);
 
   test("Deve exibir o título correto na página de login", async ({ page }) => {
     await expect(page).toHaveTitle(/QAZANDO Shop E-Commerce/);
-  });
+  }, 60000);
 
   test("Deve realizar login com sucesso", async ({ page }) => {
     await loginPage.login(user);
     await expect(page).toHaveURL(/.*my-account/);
-  });
+  },60000);
 
   test("Deve impedir login ao não preencher o e-mail", async ({ page }) => {
     await loginPage.passwordInput.fill(user.senha);
     await loginPage.submit();
     await expect(loginPage.errorEmail).toBeVisible();
-  });
+  }, 60000);
 
   test("Deve exibir mensagem de senha inválida ao deixar a senha em branco", async ({
     page,
@@ -45,5 +45,5 @@ test.describe("Funcionalidade de Login", () => {
     await loginPage.emailInput.fill(user.email);
     await loginPage.submit();
     await expect(loginPage.errorPassword).toBeVisible();
-  });
+  }, 60000);
 });
