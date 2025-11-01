@@ -45,16 +45,19 @@ automacao-docker-playwright/
 
 ```bash
 docker build -t playwright-tests .
+````
 
 🔹 2. Rodar os testes dentro do container
-docker run --rm -v "$(pwd)":/app -w /app playwright-tests npx playwright test
-
+```` docker run --rm -v "$(pwd)":/app -w /app playwright-tests npx playwright test
+````
 
 📁 Após a execução, o relatório em HTML será gerado automaticamente em:
 
+````
 playwright-report/index.html
-
+````
 
 Você pode abrir localmente com:
-
+````
 npx playwright show-report
+````
