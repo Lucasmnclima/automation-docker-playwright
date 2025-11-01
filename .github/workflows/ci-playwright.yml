@@ -17,7 +17,7 @@ jobs:
 
       #Capturando mais logs
       - name: Run Playwright tests (with debug)
-      run: npx playwright test --reporter=html --trace on
+        run: npx playwright test --reporter=html --trace on
       
       # 1️ Checkout do código
       - name: Checkout repository
