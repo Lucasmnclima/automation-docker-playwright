@@ -32,6 +32,10 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
+      # 🧭 Testar conexão com o site externo (diagnóstico)
+      - name: Test external site connectivity
+        run: curl -I https://automationpratice.com.br
+
       # 5️⃣ Iniciar aplicação antes dos testes (caso necessário)
       - name: Start application
         run: npm run start &
