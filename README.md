@@ -36,7 +36,7 @@ automacao-docker-playwright/
 ├── playwright.config.js # Configuração global do Playwright
 ├── Dockerfile # Ambiente isolado para execução dos testes
 ├── package.json # Dependências e scripts NPM
-└── README.md # Este arquivo 😄
+└── README.md # Este arquivo! 😄
 ```
 
 ---
