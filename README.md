@@ -100,8 +100,7 @@ http://localhost:7900
 
 👨‍💻 Autor
 
-Lucas Marcio Nascimento Costa Lima  
-
+Lucas Marcio Nascimento Costa Lima    
 Analista de Testes • Automação com JavaScript, Playwright, Cypress e Docker  
 📍 Belo Horizonte - MG  
 📧 lucasmnclima@gmail.com  
