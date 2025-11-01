@@ -1,0 +1,16 @@
+{
+  "name": "playwright-automation",
+  "version": "1.0.0",
+  "description": "Projeto de automação de testes E2E com Playwright",
+  "scripts": {
+    "docker:build": "docker build -t playwright-tests .",
+    "docker:run": "docker run --rm -it -p 7900:7900 playwright-tests",
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "@playwright/test": "^1.48.0"
+  }
+}

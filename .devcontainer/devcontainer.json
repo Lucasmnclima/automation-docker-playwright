@@ -1,0 +1,21 @@
+{
+  "name": "Playwright Dev Container",
+  "image": "mcr.microsoft.com/playwright:v1.48.0-jammy",
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "features": {},
+  "postCreateCommand": "npm install && npx playwright install --with-deps",
+  "remoteUser": "root",
+  "forwardPorts": [7900],
+  "extensions": [
+    "ms-playwright.playwright",
+    "ms-azuretools.vscode-docker",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "eamodio.gitlens"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "playwright.editor.showTrace": true
+  }
+}
