@@ -14,47 +14,42 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
-      #Capturando mais logs
-      - name: Run Playwright tests (with debug)
-        run: npx playwright test --reporter=html --trace on
-      
-      # 1️ Checkout do código
+      # 1️⃣ Checkout do código
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️ Instalar Node.js (mesma versão usada localmente)
+      # 2️⃣ Instalar Node.js (mesma versão usada localmente)
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # 3️ Instalar dependências
+      # 3️⃣ Instalar dependências
       - name: Install dependencies
         run: npm ci
 
-      # 4️ Instalar browsers do Playwright
+      # 4️⃣ Instalar browsers do Playwright
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      # 5️ Rodar os testes (gera relatório HTML)
-      - name: Run Playwright tests
-        run: npx playwright test --reporter=html
+      # 5️⃣ Iniciar aplicação antes dos testes (caso necessário)
+      - name: Start application
+        run: npm run start &
+        env:
+          NODE_ENV: test
 
-      # 6️ Upload do relatório como artefato
+      # 6️⃣ Criar storageState.json vazio (caso não exista)
+      - name: Ensure storageState.json exists
+        run: echo '{"cookies":[],"origins":[]}' > storageState.json
+
+      # 7️⃣ Rodar os testes com debug ativado
+      - name: Run Playwright tests (with debug)
+        run: npx playwright test --reporter=html --trace on
+
+      # 8️⃣ Upload do relatório como artefato
       - name: Upload Playwright report
         uses: actions/upload-artifact@v4
         with:
           name: playwright-html-report
           path: playwright-report/
           retention-days: 7
-      
-      # 7 Iniciar aplicação antes dos testes
-      - name: Start application
-        run: npm run start &
-        env:
-          NODE_ENV: test
-
-      # 8 Criar storageState.json vazio (caso não exista)
-      - name: Ensure storageState.json exists
-        run: echo '{"cookies":[],"origins":[]}' > storageState.json
