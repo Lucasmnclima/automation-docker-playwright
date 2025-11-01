@@ -62,3 +62,47 @@ Você pode abrir localmente com:
 ```
 npx playwright show-report
 ```
+
+☁️ Execução automática no GitHub Actions
+
+A pipeline é executada automaticamente a cada push ou pull request na branch main.
+
+📊 Relatório
+
+O relatório HTML é disponibilizado como artefato na aba Actions → Workflow → Artifacts → playwright-html-report.
+
+🧩 Scripts úteis
+# Executar todos os testes
+```
+npx playwright test
+```
+
+# Executar um teste específico
+```
+npx playwright test tests/login.spec.js
+```
+
+# Abrir o relatório HTML localmente
+```
+npx playwright show-report
+```
+
+🧠 Dica extra
+
+Caso queira debugar visualmente dentro do container (modo interativo com VNC):
+```
+docker run -p 7900:7900 playwright-tests
+```
+
+Depois acesse no navegador:
+
+http://localhost:7900
+
+👨‍💻 Autor
+
+Lucas Marcio Nascimento Costa Lima
+Analista de Testes • Automação com JavaScript, Playwright (Também faço em Cypress rs) e Docker
+📍 Belo Horizonte - MG
+📧 lucasmnclima@gmail.com
+
+🔗 [!LinkedIn](https://www.linkedin.com/in/lucasmnclima/)
