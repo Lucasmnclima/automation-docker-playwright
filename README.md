@@ -16,7 +16,9 @@ Ideal para rodar testes automatizados de forma **isolada**, **reprodutível** e 
 
 ---
 
+
 ## 🧱 Estrutura do projeto
+```
 automacao-docker-playwright/
 ├── .github/
 │ └── workflows/
@@ -35,30 +37,32 @@ automacao-docker-playwright/
 ├── Dockerfile # Ambiente isolado para execução dos testes
 ├── package.json # Dependências e scripts NPM
 └── README.md # Este arquivo 😄
-
+```
 
 ---
 
 ## 🐳 Executando via Docker
 
 ### 🔹 1. Build da imagem
-
-```bash
+```
+bash
 docker build -t playwright-tests .
-````
+```
 
 🔹 2. Rodar os testes dentro do container
-````
+```
+bash
 docker run --rm -v "$(pwd)":/app -w /app playwright-tests npx playwright test
-````
+```
 
 📁 Após a execução, o relatório em HTML será gerado automaticamente em:
-
-````
+```
+bash
 playwright-report/index.html
-````
+```
 
 Você pode abrir localmente com:
-````
+```
+bash
 npx playwright show-report
-````
+```
